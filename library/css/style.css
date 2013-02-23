@@ -1,0 +1,37 @@
+/* general reset */
+html, body, div, span, object, embed, ruby, output, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+html {
+  overflow-y: scroll;
+}
+ol, ul {
+  list-style: none;
+}
+
+#content h1 {
+  font-family: "Helvetica", Arial, Georgia;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#content h2 {
+  font-family: "Helvetica", Arial, Georgia;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#container { 
+  margin: 0 auto;
+  padding: 40px;
+  width: 1040px;
+  background: #eee;
+}

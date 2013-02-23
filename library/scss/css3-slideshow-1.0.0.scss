@@ -1,0 +1,171 @@
+/*!
+* CSS3 Image Slideshow
+* css3-slideshow-1.0.0.css
+* http://brianfernalld.com
+* MIT licensed
+*
+* Copyright (C) 2013 Brian Fernalld, http://brianfernalld.com
+*/
+
+@import "compass";
+
+$slideshow-width:  900px;
+$slideshow-height: 600px;
+
+/*
+@TODO: Add dynamic keyframes depending on number of images and seconds per image.
+$number-of-images: 5;
+$seconds-per-image: 5;
+*/
+
+#slideshow {
+  margin: 40px auto 40px;
+  position: relative;
+  background: #d8d8d8;
+  height: $slideshow-height;
+	width: $slideshow-width;
+  box-shadow: 2px 2px 10px #333;
+  border: 2px solid #333;
+  overflow: visible;
+  li.first-animation {
+  	position: absolute;
+    top: 0;
+    /*name, duration, timing function, iteration count*/
+    -moz-animation: cycle 25s ease-in-out infinite;
+    -webkit-animation: cycle 25s ease-in-out infinite;
+  }
+  li.second-animation {
+    position: absolute;
+    top: 0;
+    -moz-animation: cycletwo 25s ease-in-out infinite;
+    -webkit-animation: cycletwo 25s ease-in-out infinite;
+  }
+  li.third-animation {
+    position: absolute;
+    top: 0;
+    -moz-animation: cyclethree 25s ease-in-out infinite;
+    -webkit-animation: cyclethree 25s ease-in-out infinite;
+  }
+  li.fourth-animation {
+    position: absolute;
+    top: 0;
+    -moz-animation: cyclefour 25s ease-in-out infinite;
+    -webkit-animation: cyclefour 25s ease-in-out infinite;
+  }
+  li.fifth-animation {
+    position: absolute;
+    top: 0;
+    -moz-animation: cyclefive 25s ease-in-out infinite;
+    -webkit-animation: cyclefive 25s ease-in-out infinite;
+  }
+  :hover li {
+    animation-play-state: paused;
+  }  
+}
+
+#mask {
+  overflow: hidden;
+  height: $slideshow-height;
+}
+
+/*
+-Define the total number of images to use in the slider
+    5
+-Define the length of animation for each image
+    5 seconds
+-Define the total duration of the animation
+    Multiply the total number of images by the duration of each image:
+    5 images × 5 seconds = 25 seconds
+-Calculate how many keyframes equals one second
+    Divide the total number of keyframes by the total duration of the animation.
+    100 keyframes / 25 seconds = 4 keyframes
+    4 keyframes = 1 second
+*/
+
+@keyframes cycle {
+  0%    { opacity: 1; } /*1 second = 4%*/
+  4%    { opacity: 1; }
+  8%    { opacity: 1; } 
+  12%   { opacity: 1; } 
+  16%   { opacity: 1; } 
+  20%   { opacity: 0; } 
+  96%   { opacity: 0; }
+  100%  { opacity: 1; }
+}
+
+@keyframes cycletwo {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  16%   { opacity: 0; } 
+  20%   { opacity: 1; } 
+  24%   { opacity: 1; } 
+  28%   { opacity: 1; } 
+  32%   { opacity: 1; } 
+  36%   { opacity: 1; } 
+  40%   { opacity: 0; } 
+  100%  { opacity: 0; }
+}
+
+@keyframes cyclethree {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  36%   { opacity: 0; } 
+  40%   { opacity: 1; } 
+  44%   { opacity: 1; } 
+  48%   { opacity: 1; } 
+  52%   { opacity: 1; } 
+  56%   { opacity: 1; }
+  60%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes cyclefour {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  56%   { opacity: 0; }
+  60%   { opacity: 1; }
+  64%   { opacity: 1; }
+  68%   { opacity: 1; }
+  72%   { opacity: 1; }
+  76%   { opacity: 1; }
+  80%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes cyclefive {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  76%   { opacity: 0; }
+  80%   { opacity: 1; }
+  84%   { opacity: 1; }
+  88%   { opacity: 1; }
+  92%   { opacity: 1; }
+  96%   { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+/*Full keyframe cycle*/
+/*@keyframes cycle {
+  0%    { opacity: 1; }
+  4%    { opacity: 1; }
+  8%    { opacity: 1; } 
+  12%   { opacity: 1; } 
+  16%   { opacity: 1; } 
+  20%   { opacity: 0; } 
+  24%   { opacity: 0; } 
+  28%   { opacity: 0; } 
+  32%   { opacity: 0; } 
+  36%   { opacity: 0; } 
+  40%   { opacity: 0; } 
+  44%   { opacity: 0; } 
+  48%   { opacity: 0; } 
+  52%   { opacity: 0; } 
+  56%   { opacity: 0; }
+  60%   { opacity: 0; }
+  64%   { opacity: 0; }
+  68%   { opacity: 0; }
+  72%   { opacity: 0; }
+  76%   { opacity: 0; }
+  80%   { opacity: 0; }
+  84%   { opacity: 0; }
+  88%   { opacity: 0; }
+  92%   { opacity: 0; }
+  96%   { opacity: 0; }
+  100%  { opacity: 1; }
+}*/
