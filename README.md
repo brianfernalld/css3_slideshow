@@ -7,11 +7,11 @@ Uses SASS/SCSS. Pauses on hover.
 Installation
 -------
 
-*Copy css3-slideshow-1.0.0.css into your working directory.
-*Link to css3-slideshow-1.0.0.css within your header.
-*Copy the contents of id content-slideshow within index.html.
-*Edit the image sources and the $slideshow-width and $slideshow-height within css3-slideshow-1.0.0.scss. Or alternatively edit respective widths and heights within css3-slideshow-1.0.0.css.
-*Feel free to modify the animation properties to change the transition effects and delay between images. 
+* Copy css3-slideshow-1.0.0.css into your working directory.
+* Link to css3-slideshow-1.0.0.css within your header.
+* Copy the contents of id content-slideshow within index.html.
+* Edit the image sources and the $slideshow-width and $slideshow-height within css3-slideshow-1.0.0.scss. Or alternatively edit respective widths and heights within css3-slideshow-1.0.0.css.
+* Feel free to modify the animation properties to change the transition effects and delay between images. 
 
 Contributing
 ------------
