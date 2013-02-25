@@ -82,7 +82,7 @@ $seconds-per-image: 5;
     4 keyframes = 1 second
 */
 
-@keyframes cycle {
+@-webkit-keyframes cycle {
   0%    { opacity: 1; } /*1 second = 4%*/
   4%    { opacity: 1; }
   8%    { opacity: 1; } 
@@ -93,7 +93,7 @@ $seconds-per-image: 5;
   100%  { opacity: 1; }
 }
 
-@keyframes cycletwo {
+@-webkit-keyframes cycletwo {
   0%    { opacity: 0; } /*1 second = 4%*/
   16%   { opacity: 0; } 
   20%   { opacity: 1; } 
@@ -105,7 +105,7 @@ $seconds-per-image: 5;
   100%  { opacity: 0; }
 }
 
-@keyframes cyclethree {
+@-webkit-keyframes cyclethree {
   0%    { opacity: 0; } /*1 second = 4%*/
   36%   { opacity: 0; } 
   40%   { opacity: 1; } 
@@ -117,7 +117,7 @@ $seconds-per-image: 5;
   100%  { opacity: 0; }
 }
 
-@keyframes cyclefour {
+@-webkit-keyframes cyclefour {
   0%    { opacity: 0; } /*1 second = 4%*/
   56%   { opacity: 0; }
   60%   { opacity: 1; }
@@ -129,7 +129,7 @@ $seconds-per-image: 5;
   100%  { opacity: 0; }
 }
 
-@keyframes cyclefive {
+@-webkit-keyframes cyclefive {
   0%    { opacity: 0; } /*1 second = 4%*/
   76%   { opacity: 0; }
   80%   { opacity: 1; }
@@ -139,6 +139,67 @@ $seconds-per-image: 5;
   96%   { opacity: 1; }
   100%  { opacity: 0; }
 }
+
+
+@-moz-keyframes cycle {
+  0%    { opacity: 1; } /*1 second = 4%*/
+  4%    { opacity: 1; }
+  8%    { opacity: 1; } 
+  12%   { opacity: 1; } 
+  16%   { opacity: 1; } 
+  20%   { opacity: 0; } 
+  96%   { opacity: 0; }
+  100%  { opacity: 1; }
+}
+
+@-moz-keyframes cycletwo {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  16%   { opacity: 0; } 
+  20%   { opacity: 1; } 
+  24%   { opacity: 1; } 
+  28%   { opacity: 1; } 
+  32%   { opacity: 1; } 
+  36%   { opacity: 1; } 
+  40%   { opacity: 0; } 
+  100%  { opacity: 0; }
+}
+
+@-moz-keyframes cyclethree {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  36%   { opacity: 0; } 
+  40%   { opacity: 1; } 
+  44%   { opacity: 1; } 
+  48%   { opacity: 1; } 
+  52%   { opacity: 1; } 
+  56%   { opacity: 1; }
+  60%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@-moz-keyframes cyclefour {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  56%   { opacity: 0; }
+  60%   { opacity: 1; }
+  64%   { opacity: 1; }
+  68%   { opacity: 1; }
+  72%   { opacity: 1; }
+  76%   { opacity: 1; }
+  80%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@-moz-keyframes cyclefive {
+  0%    { opacity: 0; } /*1 second = 4%*/
+  76%   { opacity: 0; }
+  80%   { opacity: 1; }
+  84%   { opacity: 1; }
+  88%   { opacity: 1; }
+  92%   { opacity: 1; }
+  96%   { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+
 
 /*Full keyframe cycle*/
 /*@keyframes cycle {

@@ -1,0 +1,573 @@
+/*
+* CSS3 Image Slideshow
+* css3-slideshow-1.0.0.css
+* http://brianfernalld.com
+* MIT licensed
+*
+* Copyright (C) 2013 Brian Fernalld, http://brianfernalld.com
+*/
+/*
+@TODO: Add dynamic keyframes depending on number of images and seconds per image.
+$number-of-images: 5;
+$seconds-per-image: 5;
+*/
+/* line 21, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow {
+  margin: 40px auto 40px;
+  position: relative;
+  background: #d8d8d8;
+  height: 600px;
+  width: 900px;
+  box-shadow: 2px 2px 10px #333333;
+  border: 2px solid #333333;
+  overflow: visible;
+}
+/* line 30, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow li.first-animation {
+  position: absolute;
+  top: 0;
+  /*name, duration, timing function, iteration count*/
+  -moz-animation: cycle 25s ease-in-out infinite;
+  -webkit-animation: cycle 25s ease-in-out infinite;
+}
+/* line 37, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow li.second-animation {
+  position: absolute;
+  top: 0;
+  -moz-animation: cycletwo 25s ease-in-out infinite;
+  -webkit-animation: cycletwo 25s ease-in-out infinite;
+}
+/* line 43, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow li.third-animation {
+  position: absolute;
+  top: 0;
+  -moz-animation: cyclethree 25s ease-in-out infinite;
+  -webkit-animation: cyclethree 25s ease-in-out infinite;
+}
+/* line 49, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow li.fourth-animation {
+  position: absolute;
+  top: 0;
+  -moz-animation: cyclefour 25s ease-in-out infinite;
+  -webkit-animation: cyclefour 25s ease-in-out infinite;
+}
+/* line 55, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow li.fifth-animation {
+  position: absolute;
+  top: 0;
+  -moz-animation: cyclefive 25s ease-in-out infinite;
+  -webkit-animation: cyclefive 25s ease-in-out infinite;
+}
+/* line 61, ../scss/css3-slideshow-1.1.0.scss */
+#slideshow :hover li {
+  animation-play-state: paused;
+}
+
+/* line 66, ../scss/css3-slideshow-1.1.0.scss */
+#mask {
+  overflow: hidden;
+  height: 600px;
+}
+
+/*
+-Define the total number of images to use in the slider
+    5
+-Define the length of animation for each image
+    5 seconds
+-Define the total duration of the animation
+    Multiply the total number of images by the duration of each image:
+    5 images × 5 seconds = 25 seconds
+-Calculate how many keyframes equals one second
+    Divide the total number of keyframes by the total duration of the animation.
+    100 keyframes / 25 seconds = 4 keyframes
+    4 keyframes = 1 second
+*/
+@-webkit-keyframes cycle {
+  /* line 86, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /*1 second = 4%*/
+  /* line 87, ../scss/css3-slideshow-1.1.0.scss */
+  4% {
+    opacity: 1;
+  }
+
+  /* line 88, ../scss/css3-slideshow-1.1.0.scss */
+  8% {
+    opacity: 1;
+  }
+
+  /* line 89, ../scss/css3-slideshow-1.1.0.scss */
+  12% {
+    opacity: 1;
+  }
+
+  /* line 90, ../scss/css3-slideshow-1.1.0.scss */
+  16% {
+    opacity: 1;
+  }
+
+  /* line 91, ../scss/css3-slideshow-1.1.0.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 92, ../scss/css3-slideshow-1.1.0.scss */
+  96% {
+    opacity: 0;
+  }
+
+  /* line 93, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cycletwo {
+  /* line 97, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 98, ../scss/css3-slideshow-1.1.0.scss */
+  16% {
+    opacity: 0;
+  }
+
+  /* line 99, ../scss/css3-slideshow-1.1.0.scss */
+  20% {
+    opacity: 1;
+  }
+
+  /* line 100, ../scss/css3-slideshow-1.1.0.scss */
+  24% {
+    opacity: 1;
+  }
+
+  /* line 101, ../scss/css3-slideshow-1.1.0.scss */
+  28% {
+    opacity: 1;
+  }
+
+  /* line 102, ../scss/css3-slideshow-1.1.0.scss */
+  32% {
+    opacity: 1;
+  }
+
+  /* line 103, ../scss/css3-slideshow-1.1.0.scss */
+  36% {
+    opacity: 1;
+  }
+
+  /* line 104, ../scss/css3-slideshow-1.1.0.scss */
+  40% {
+    opacity: 0;
+  }
+
+  /* line 105, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cyclethree {
+  /* line 109, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 110, ../scss/css3-slideshow-1.1.0.scss */
+  36% {
+    opacity: 0;
+  }
+
+  /* line 111, ../scss/css3-slideshow-1.1.0.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 112, ../scss/css3-slideshow-1.1.0.scss */
+  44% {
+    opacity: 1;
+  }
+
+  /* line 113, ../scss/css3-slideshow-1.1.0.scss */
+  48% {
+    opacity: 1;
+  }
+
+  /* line 114, ../scss/css3-slideshow-1.1.0.scss */
+  52% {
+    opacity: 1;
+  }
+
+  /* line 115, ../scss/css3-slideshow-1.1.0.scss */
+  56% {
+    opacity: 1;
+  }
+
+  /* line 116, ../scss/css3-slideshow-1.1.0.scss */
+  60% {
+    opacity: 0;
+  }
+
+  /* line 117, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cyclefour {
+  /* line 121, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 122, ../scss/css3-slideshow-1.1.0.scss */
+  56% {
+    opacity: 0;
+  }
+
+  /* line 123, ../scss/css3-slideshow-1.1.0.scss */
+  60% {
+    opacity: 1;
+  }
+
+  /* line 124, ../scss/css3-slideshow-1.1.0.scss */
+  64% {
+    opacity: 1;
+  }
+
+  /* line 125, ../scss/css3-slideshow-1.1.0.scss */
+  68% {
+    opacity: 1;
+  }
+
+  /* line 126, ../scss/css3-slideshow-1.1.0.scss */
+  72% {
+    opacity: 1;
+  }
+
+  /* line 127, ../scss/css3-slideshow-1.1.0.scss */
+  76% {
+    opacity: 1;
+  }
+
+  /* line 128, ../scss/css3-slideshow-1.1.0.scss */
+  80% {
+    opacity: 0;
+  }
+
+  /* line 129, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cyclefive {
+  /* line 133, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 134, ../scss/css3-slideshow-1.1.0.scss */
+  76% {
+    opacity: 0;
+  }
+
+  /* line 135, ../scss/css3-slideshow-1.1.0.scss */
+  80% {
+    opacity: 1;
+  }
+
+  /* line 136, ../scss/css3-slideshow-1.1.0.scss */
+  84% {
+    opacity: 1;
+  }
+
+  /* line 137, ../scss/css3-slideshow-1.1.0.scss */
+  88% {
+    opacity: 1;
+  }
+
+  /* line 138, ../scss/css3-slideshow-1.1.0.scss */
+  92% {
+    opacity: 1;
+  }
+
+  /* line 139, ../scss/css3-slideshow-1.1.0.scss */
+  96% {
+    opacity: 1;
+  }
+
+  /* line 140, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cycle {
+  /* line 145, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /*1 second = 4%*/
+  /* line 146, ../scss/css3-slideshow-1.1.0.scss */
+  4% {
+    opacity: 1;
+  }
+
+  /* line 147, ../scss/css3-slideshow-1.1.0.scss */
+  8% {
+    opacity: 1;
+  }
+
+  /* line 148, ../scss/css3-slideshow-1.1.0.scss */
+  12% {
+    opacity: 1;
+  }
+
+  /* line 149, ../scss/css3-slideshow-1.1.0.scss */
+  16% {
+    opacity: 1;
+  }
+
+  /* line 150, ../scss/css3-slideshow-1.1.0.scss */
+  20% {
+    opacity: 0;
+  }
+
+  /* line 151, ../scss/css3-slideshow-1.1.0.scss */
+  96% {
+    opacity: 0;
+  }
+
+  /* line 152, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes cycletwo {
+  /* line 156, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 157, ../scss/css3-slideshow-1.1.0.scss */
+  16% {
+    opacity: 0;
+  }
+
+  /* line 158, ../scss/css3-slideshow-1.1.0.scss */
+  20% {
+    opacity: 1;
+  }
+
+  /* line 159, ../scss/css3-slideshow-1.1.0.scss */
+  24% {
+    opacity: 1;
+  }
+
+  /* line 160, ../scss/css3-slideshow-1.1.0.scss */
+  28% {
+    opacity: 1;
+  }
+
+  /* line 161, ../scss/css3-slideshow-1.1.0.scss */
+  32% {
+    opacity: 1;
+  }
+
+  /* line 162, ../scss/css3-slideshow-1.1.0.scss */
+  36% {
+    opacity: 1;
+  }
+
+  /* line 163, ../scss/css3-slideshow-1.1.0.scss */
+  40% {
+    opacity: 0;
+  }
+
+  /* line 164, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cyclethree {
+  /* line 168, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 169, ../scss/css3-slideshow-1.1.0.scss */
+  36% {
+    opacity: 0;
+  }
+
+  /* line 170, ../scss/css3-slideshow-1.1.0.scss */
+  40% {
+    opacity: 1;
+  }
+
+  /* line 171, ../scss/css3-slideshow-1.1.0.scss */
+  44% {
+    opacity: 1;
+  }
+
+  /* line 172, ../scss/css3-slideshow-1.1.0.scss */
+  48% {
+    opacity: 1;
+  }
+
+  /* line 173, ../scss/css3-slideshow-1.1.0.scss */
+  52% {
+    opacity: 1;
+  }
+
+  /* line 174, ../scss/css3-slideshow-1.1.0.scss */
+  56% {
+    opacity: 1;
+  }
+
+  /* line 175, ../scss/css3-slideshow-1.1.0.scss */
+  60% {
+    opacity: 0;
+  }
+
+  /* line 176, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cyclefour {
+  /* line 180, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 181, ../scss/css3-slideshow-1.1.0.scss */
+  56% {
+    opacity: 0;
+  }
+
+  /* line 182, ../scss/css3-slideshow-1.1.0.scss */
+  60% {
+    opacity: 1;
+  }
+
+  /* line 183, ../scss/css3-slideshow-1.1.0.scss */
+  64% {
+    opacity: 1;
+  }
+
+  /* line 184, ../scss/css3-slideshow-1.1.0.scss */
+  68% {
+    opacity: 1;
+  }
+
+  /* line 185, ../scss/css3-slideshow-1.1.0.scss */
+  72% {
+    opacity: 1;
+  }
+
+  /* line 186, ../scss/css3-slideshow-1.1.0.scss */
+  76% {
+    opacity: 1;
+  }
+
+  /* line 187, ../scss/css3-slideshow-1.1.0.scss */
+  80% {
+    opacity: 0;
+  }
+
+  /* line 188, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cyclefive {
+  /* line 192, ../scss/css3-slideshow-1.1.0.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /*1 second = 4%*/
+  /* line 193, ../scss/css3-slideshow-1.1.0.scss */
+  76% {
+    opacity: 0;
+  }
+
+  /* line 194, ../scss/css3-slideshow-1.1.0.scss */
+  80% {
+    opacity: 1;
+  }
+
+  /* line 195, ../scss/css3-slideshow-1.1.0.scss */
+  84% {
+    opacity: 1;
+  }
+
+  /* line 196, ../scss/css3-slideshow-1.1.0.scss */
+  88% {
+    opacity: 1;
+  }
+
+  /* line 197, ../scss/css3-slideshow-1.1.0.scss */
+  92% {
+    opacity: 1;
+  }
+
+  /* line 198, ../scss/css3-slideshow-1.1.0.scss */
+  96% {
+    opacity: 1;
+  }
+
+  /* line 199, ../scss/css3-slideshow-1.1.0.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/*Full keyframe cycle*/
+/*@keyframes cycle {
+  0%    { opacity: 1; }
+  4%    { opacity: 1; }
+  8%    { opacity: 1; } 
+  12%   { opacity: 1; } 
+  16%   { opacity: 1; } 
+  20%   { opacity: 0; } 
+  24%   { opacity: 0; } 
+  28%   { opacity: 0; } 
+  32%   { opacity: 0; } 
+  36%   { opacity: 0; } 
+  40%   { opacity: 0; } 
+  44%   { opacity: 0; } 
+  48%   { opacity: 0; } 
+  52%   { opacity: 0; } 
+  56%   { opacity: 0; }
+  60%   { opacity: 0; }
+  64%   { opacity: 0; }
+  68%   { opacity: 0; }
+  72%   { opacity: 0; }
+  76%   { opacity: 0; }
+  80%   { opacity: 0; }
+  84%   { opacity: 0; }
+  88%   { opacity: 0; }
+  92%   { opacity: 0; }
+  96%   { opacity: 0; }
+  100%  { opacity: 1; }
+}*/
